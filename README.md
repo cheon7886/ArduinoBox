@@ -13,4 +13,4 @@ All right reserved Robolink(http://www.robolink.co.kr)
 -First released.
 
 ##[Board Map]
-![alt tag](https://raw.github.com/cheon7886/ArduinoBox/master/boardmap.png)
+![alt tag](https://raw.githubusercontent.com/cheon7886/ArduinoBox/master/boardmap.jpg)
