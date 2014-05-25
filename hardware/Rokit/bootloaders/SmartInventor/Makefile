@@ -70,7 +70,7 @@ FORMAT = ihex
 
 
 # Target file name (without extension).
-TARGET = ATmegaBOOT_16
+TARGET = boot_SmartInventor
 
 
 # Object files directory

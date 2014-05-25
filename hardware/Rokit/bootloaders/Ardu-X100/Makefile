@@ -70,7 +70,7 @@ FORMAT = ihex
 
 
 # Target file name (without extension).
-TARGET = boot_SmartServoBox
+TARGET = boot_Ardu-X100
 
 
 # Object files directory

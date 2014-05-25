@@ -9,7 +9,7 @@ DCM motor2;
 
 void setup()
 {
-   Remocon.Setup();
+   Remocon.rokitSetup();
    Remocon.attachCallback(remote);
    motor1.attachPins(12, 13);
    motor2.attachPins(14, 15); 

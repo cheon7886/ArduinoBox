@@ -20,7 +20,6 @@ but this library is of benefit to controlling many motors by a rough speed contr
 
 */
 
-
 #include "Arduino.h"
 #include "MsTimer2.h"
 #include "DCM.h"
@@ -38,7 +37,7 @@ void InputLogic()
     
 	for (i = 0; i < MotorCount; i++)
 	{
-		if(_Motor[i].Speed >= PWMCount) 
+		if(_Motor[i].Speed > PWMCount) 
 		{
 			digitalWrite(_Motor[i].Pin0, _Motor[i].StatePin0);
 			digitalWrite(_Motor[i].Pin1, _Motor[i].StatePin1);

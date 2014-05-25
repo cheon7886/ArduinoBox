@@ -42,6 +42,7 @@ class IRRemocon
 	void receiverPin(unsigned char Pin);
 	void rokitSetup();
 	void (*callback)(void);
+	unsigned int _IRData;
 	
 
   private:
@@ -52,7 +53,6 @@ class IRRemocon
 	unsigned char _IRFlag;
 	unsigned char _IRIndex;
 	unsigned char _IRCnt;
-	unsigned int _IRData;
 	signed long  _IRTimer;
     unsigned char _IRInterval;
     unsigned char _buttonUp;

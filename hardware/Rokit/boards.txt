@@ -12,7 +12,7 @@ SmartInventor.bootloader.high_fuses=0xc0
 SmartInventor.bootloader.extend=0xff
 
 SmartInventor.bootloader.path=SmartInventor
-SmartInventor.bootloader.file=atmega168.hex
+SmartInventor.bootloader.file=boot_SmartInventor.hex
 
 SmartInventor.bootloader.unlock_bits=0x3f
 SmartInventor.bootloader.lock_bits=0x0ff
@@ -35,7 +35,7 @@ SmartServoBox.bootloader.high_fuses=0xc0
 SmartServoBox.bootloader.extend=0xff
 
 SmartServoBox.bootloader.path=SmartServoBox
-SmartServoBox.bootloader.file=atmega16.hex
+SmartServoBox.bootloader.file=boot_SmartServoBox.hex
 
 SmartServoBox.bootloader.unlock_bits=0x3f
 SmartServoBox.bootloader.lock_bits=0x0ff
@@ -63,5 +63,27 @@ ArduBox128.build.mcu=atmega128
 ArduBox128.build.f_cpu=16000000L
 ArduBox128.build.core=atmega128
 ArduBox128.build.variant=ArduBox128
+
+##############################################################
+
+Ardu-X100.name = Rokit-Ardu-X100 
+Ardu-X100.upload.protocol=arduino
+Ardu-X100.upload.maximum_size=14336
+Ardu-X100.upload.speed=57600
+Ardu-X100.upload.using=USBasp
+Ardu-X100.bootloader.low_fuses=0x3f
+Ardu-X100.bootloader.high_fuses=0xc0
+Ardu-X100.bootloader.extend=0xff
+
+Ardu-X100.bootloader.path=Ardu-X100 
+Ardu-X100.bootloader.file=boot_Ardu-X100.hex
+
+Ardu-X100.bootloader.unlock_bits=0x3f
+Ardu-X100.bootloader.lock_bits=0x0ff
+Ardu-X100.build.mcu=atmega16
+Ardu-X100.build.f_cpu=16000000L
+
+Ardu-X100.build.core=atmega16
+Ardu-X100.build.variant=Ardu-X100 
 
 ##############################################################

@@ -36,7 +36,10 @@ void IRRemocon::remocon()
 		dipSW = (~(sPin0 | (sPin1 << 1) | (sPin2 << 2))) & 0b00000111;
 		// 스위치ID와 리모컨 수신값은 역수이며 하위 3비트 이외에는 0으로 만든다.
 
-      
+        if (_IRTimer > 0) {_IRTimer = _IRTimer - pastTime;  }  //일정시간이 지나면 버튼업으로 간주
+		if (_IRTimer <= 0) _IRData = 0;
+		
+		
 		if (_IRIn == 0)              
 	    {
 			_IRFlag = 1;            
@@ -93,11 +96,6 @@ void IRRemocon::remocon()
 		}
 
          // ir timer
-		if (_IRTimer >= 0) {_IRTimer = _IRTimer - pastTime;  }  //일정시간이 지나면 버튼업으로 간주
-		else 
-		{ 
-		    _IRData = 0;
-		}
 		
         (*callback)();
 

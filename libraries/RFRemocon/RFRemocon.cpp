@@ -55,7 +55,7 @@ void RFRemoconClass::send(word data)
 
 int RFRemoconClass::recieve()
 {
-	word data;
+	word data = 0xFFFF;
 	int num = RFRemoconSerial->available();
 	for(int i=0; i<num; i++)
 	{		
@@ -100,14 +100,16 @@ int RFRemoconClass::recieve()
 					{
 						data = _packet[2];
 						data |= (_packet[4] << 8) & 0xFF00;
-						return (int)data;
 					}
 				}
 			}
 		}
 	}
 
-	return -1;
+	if(data == 0xFFFF)
+		return -1;
+	else
+		return (int)data;
 }
 
 RFRemoconClass RFRemocon(&Serial);
